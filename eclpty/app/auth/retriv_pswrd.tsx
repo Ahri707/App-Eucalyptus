@@ -1,3 +1,4 @@
+import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 import React, { useState } from "react";
 import { SafeAreaView, Text, TextInput, TouchableOpacity, View } from "react-native";
@@ -25,22 +26,24 @@ export default function ForgotPasswordScreen() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.content}>
-        <Text style={styles.title}>Ops!</Text>
-        <Text style={styles.title}>Esqueceu sua</Text>
-        <Text style={styles.title}>senha?</Text>
+      <View style={styles.decorTop} />
+      <View style={styles.decorBottom} />
 
-        <Text style={styles.subtitle}>
-          Digite seu e-mail que iremos enviar um link para você
-          estar refazendo sua senha de acesso
-        </Text>
+      <View style={styles.card}>
+        <View style={styles.header}>
+          <View style={styles.logoContainer}>
+            <Ionicons name="nutrition" size={28} color="#0b0b0b" />
+          </View>
+          <View>
+            <Text style={styles.title}>Esqueceu sua senha?</Text>
+            <Text style={styles.infoText}>Digite seu e-mail e iremos enviar um link para você redefinir sua senha.</Text>
+          </View>
+        </View>
 
-        <Text style={styles.small}>Não se preocupe! :D</Text>
-
-        <View style={{ marginTop: 40 }}>
+        <View style={styles.form}>
           <Text style={styles.label}>Informe seu E-mail de acesso</Text>
           <TextInput
-            placeholder=""
+            placeholder="seu@email.com"
             style={styles.input}
             value={email}
             onChangeText={(text) => {
@@ -66,19 +69,19 @@ export default function ForgotPasswordScreen() {
             onPress={handleSubmit}
             disabled={!validateEmail(email)}
           >
-            <Text style={styles.buttonText}>Esqueci minha senha</Text>
+            <Text style={styles.buttonText}>Enviar link</Text>
           </TouchableOpacity>
-        </View>
 
-        <View style={styles.footer}>
-          <Text style={styles.footerText}>Ainda não tem uma conta ?</Text>
-          <TouchableOpacity
-            onPress={() => router.push('/auth/register')}
-            accessibilityRole="button"
-            activeOpacity={0.7}
-          >
-            <Text style={styles.create}> Crie uma</Text>
-          </TouchableOpacity>
+          <View style={styles.centerRow}>
+            <Text style={styles.footerText}>Ainda não tem uma conta?</Text>
+            <TouchableOpacity
+              onPress={() => router.push('/auth/register')}
+              accessibilityRole="button"
+              activeOpacity={0.7}
+            >
+              <Text style={styles.create}> Crie uma</Text>
+            </TouchableOpacity>
+          </View>
         </View>
       </View>
     </SafeAreaView>

@@ -2,11 +2,30 @@ import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#242434",
+    backgroundColor: '#1f1f26',
     padding: 20,
     paddingTop: 60,
     paddingBottom: 50,
     flexGrow: 1
+  },
+
+  decorTop: {
+    position: 'absolute',
+    top: -40,
+    right: -40,
+    width: 160,
+    height: 160,
+    borderRadius: 80,
+    backgroundColor: 'rgba(0,229,255,0.06)',
+  },
+  decorBottom: {
+    position: 'absolute',
+    bottom: -50,
+    left: -50,
+    width: 220,
+    height: 220,
+    borderRadius: 110,
+    backgroundColor: 'rgba(179,255,51,0.05)'
   },
 
   header: {
@@ -20,17 +39,19 @@ const styles = StyleSheet.create({
   },
 
   greeting: {
-    color: "#fff",
-    fontSize: 16
+    color: '#00e5ff',
+    fontSize: 18,
+    fontWeight: '700'
   },
 
   searchContainer: {
     marginTop: 16,
-    backgroundColor: "#333344",
-    borderRadius: 10,
+    backgroundColor: '#2f3137',
+    borderRadius: 12,
     paddingVertical: 10,
-    flexDirection: "row",
-    alignItems: "center"
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: 10
   },
 
   searchInput: {
@@ -45,29 +66,34 @@ const styles = StyleSheet.create({
     height: 36,
     borderRadius: 18,
     marginLeft: 8,
-    marginRight: 8
+    marginRight: 8,
+    borderWidth: 1,
+    borderColor: 'rgba(255,255,255,0.06)'
   },
 
   daysRow: {
-    flexDirection: "row",
+    flexDirection: 'row',
     marginTop: 20,
     paddingLeft: 6,
-    alignItems: "center"
+    alignItems: 'center'
   },
 
   dayBox: {
-    backgroundColor: "#323244",
+    backgroundColor: '#25262d',
     width: 72,
     paddingVertical: 10,
     paddingHorizontal: 8,
-    borderRadius: 8,
-    alignItems: "center",
-    marginRight: 12
+    borderRadius: 10,
+    alignItems: 'center',
+    marginRight: 12,
+    borderWidth: 1,
+    borderColor: 'rgba(255,255,255,0.03)'
   },
 
   dayNumber: {
-    color: "#B7FF5A",
-    fontSize: 16
+    color: '#B7FF5A',
+    fontSize: 16,
+    fontWeight: '700'
   },
 
   dayText: {
@@ -76,33 +102,35 @@ const styles = StyleSheet.create({
   },
 
   cardapioTitle: {
-    color: "#B7FF5A",
+    color: '#00e5ff',
     fontSize: 18,
     marginTop: 25
   },
 
   menuBox: {
-    backgroundColor: "#fff",
-    borderRadius: 20,
+    backgroundColor: '#25262d',
+    borderRadius: 16,
     padding: 16,
     marginTop: 10
   },
 
   sectionTitle: {
     fontSize: 16,
-    fontWeight: "700"
+    fontWeight: '700',
+    color: '#dffeff'
   },
 
   item: {
     fontSize: 14,
-    marginTop: 4
+    marginTop: 4,
+    color: '#fff'
   },
 
   smallHint: {
-    color: "#8CCF7A",
+    color: '#8CCF7A',
     fontSize: 12,
     marginTop: 10,
-    textAlign: "center"
+    textAlign: 'center'
   },
 
   cardapioBtn: {
@@ -142,9 +170,9 @@ const styles = StyleSheet.create({
 
   menuHeader: {
     fontSize: 20,
-    fontWeight: "700",
+    fontWeight: '700',
     marginBottom: 12,
-    color: "#B7FF5A"
+    color: '#B7FF5A'
   },
 
   menuItem: {
@@ -182,10 +210,10 @@ const styles = StyleSheet.create({
   },
 
   turmasTitle: {
-    color: "#26C3D4",
+    color: '#26C3D4',
     fontSize: 20,
     marginTop: 25,
-    textAlign: "center"
+    textAlign: 'center'
   },
 
   turmasGrid: {
@@ -196,14 +224,14 @@ const styles = StyleSheet.create({
   },
 
   turmaBtn: {
-    width: "48%",
-    backgroundColor: "#26C3D4",
+    width: '48%',
+    backgroundColor: '#26C3D4',
     paddingVertical: 14,
     marginBottom: 12,
     borderRadius: 12,
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center"
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center'
   },
 
   turmaText: {
